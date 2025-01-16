@@ -2,7 +2,6 @@ import express = require("express");
 import User from '../model/User'
 import {addUser, deleteUser, getUniqUser, getUsers, updateUser} from "../database/UserData";
 
-
 const router = express.Router();
 
 router.post("/", async (req: express.Request, res: express.Response) => {
