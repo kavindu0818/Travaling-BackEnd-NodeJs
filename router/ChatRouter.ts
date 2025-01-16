@@ -1,6 +1,6 @@
 import express = require("express");
 import Chat from "../model/Chat";
-import {getAllChats, getChat, saveChat, updateChat} from "../database/ChatData";
+import {delete_Chat, getAllChats, getChat, saveChat, updateChat} from "../database/ChatData";
 
 const router = express.Router();
 
@@ -50,6 +50,16 @@ router.put("/:id", async (req: express.Request, res: express.Response) => {
         res.status(500).send({error:"Not Saved Chat"});
     }
 
+})
+
+router.delete('/:id',(req: express.Request, res: express.Response) => {
+    try {
+        const {id} = req.params;
+        const deletedChat = delete_Chat(id);
+        res.status(200).send(deletedChat)
+    }catch (error){
+        res.status(500).send({error:"Not Deleted Chat"});
+    }
 })
 
 export default router;
