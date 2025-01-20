@@ -4,8 +4,6 @@ import ChatRouter from './router/ChatRouter'
 import TravelDetailsRouter from "./router/TravelDetailsRouter";
 import TravelTipsRouter from "./router/TravelTipsRouter";
 import LocationRouter from "./router/LocationRouter";
-
-
 const app =  express();
 app.use(express.json());
 

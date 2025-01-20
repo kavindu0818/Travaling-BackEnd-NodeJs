@@ -1,5 +1,5 @@
 import TravelTips from "../model/TravelTips";
-import {chat} from "./ChatData";
+
 
 export const travelTips: TravelTips [] = []
 

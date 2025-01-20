@@ -25,7 +25,7 @@ router.get('/:id', (req, res) => {
     }
 })
 
-router.get('/:id/location', (req, res) => {
+router.get('/', (req, res) => {
     try {
         const getLocations = getAllLocations();
         res.status(200).json(getLocations);
