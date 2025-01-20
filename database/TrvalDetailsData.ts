@@ -1,5 +1,4 @@
 import TravelDetails from "../model/TravelDetails";
-import {chat} from "./ChatData";
 
 export const travelDetails:TravelDetails []=[]
 
@@ -7,14 +6,14 @@ export function save_TravelDetails(newTravelDetails:TravelDetails) {
     travelDetails.push(newTravelDetails)
 
     console.log(travelDetails)
-    // console.log(newTravelDetails.trip_type)
+
 }
 
 export function getAll_TravelDetails() {
     return travelDetails;
 }
 
-export function getUniq_TravelDetails(id: string) {
+export function getSelected_TravelDetails(id: string) {
     const user = travelDetails.find(trvalDetails => trvalDetails.travel_id === id);
     if (user) {
         console.log(`Travel Details with ID ${id} found.`);

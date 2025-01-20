@@ -2,12 +2,10 @@ import express = require("express");
 import TravelDetails from "../model/TravelDetails";
 import {
     delete_TravelDetails,
-    getAll_TravelDetails, getUniq_TravelDetails,
+    getAll_TravelDetails, getSelected_TravelDetails,
     save_TravelDetails,
     update_TravelDetails
 } from "../database/TrvalDetailsData";
-import {getUsers} from "../database/UserData";
-import {getAllChats} from "../database/ChatData";
 
 const router = express.Router();
 
@@ -37,7 +35,7 @@ router.get('/', (req, res) => {
 router.get('/:id', async (req: express.Request, res: express.Response) => {
   try {
       const {id} = req.params;
-      const getuniq_trvelDetails = getUniq_TravelDetails(id);
+      const getuniq_trvelDetails = getSelected_TravelDetails(id);
       res.status(200).json(getuniq_trvelDetails);
   }catch (error){
       res.status(500).send({error:"Not Get TravelDetails"});
