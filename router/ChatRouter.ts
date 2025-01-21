@@ -40,7 +40,6 @@ router.get("/:id", async (req: express.Request, res: express.Response) => {
 })
 
 router.put("/:id", async (req: express.Request, res: express.Response) => {
-
     try {
         const{quaryId, quaryText,  responseText, createdAt,userId} = req.body;
         const newChat = new Chat(quaryId,quaryText,responseText,createdAt,userId);

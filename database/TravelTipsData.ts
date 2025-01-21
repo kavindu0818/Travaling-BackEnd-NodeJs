@@ -5,7 +5,6 @@ export const travelTips: TravelTips [] = []
 
 export function save_travelTips(newTravelTips: TravelTips) {
     travelTips.push(newTravelTips);
-
     console.log(travelTips);
 }
 
