@@ -11,8 +11,8 @@ export default class Location {
         this.loctaion_id = loctaion_id;
         this.name = name;
         this.address = address;
-        this.rating = Number(address);
-        this.type = address;
+        this.rating = rating;
+        this.type = type;
         this.created_at = created_at;
         this.loctaion_id = loctaion_id;
         this.travel_id = travel_id;
